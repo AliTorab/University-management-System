@@ -35,7 +35,6 @@ using namespace std;
 
 int main()
 {
-	// cout<<"\t\t\tM Shehroz khan	Hassan Ali Janjua	Ali Torab"<<endl<<"\t\t\tBEMTS-F-21-A"<<endl;
 	cout<<"\n\t\t\t#################################################"<<endl;
 	cout<<"\t\t\t## Welcome To Air University Management System ##"<<endl;
 	cout<<"\t\t\t#################################################\n\n"<<endl;
@@ -172,7 +171,6 @@ cout<<"Do You want to Try Again ? Press y :";
 	else
 	{
 	cout<<"Wrong user name or Password \n";
-	//cout<<"haaaan esy tu nai na, esy nai khuly ga \n";			// just for remainder
 	}
 	cout<<"Do You want to Enter Marks again ? Press y :";
 	cin>>condition;
