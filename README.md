@@ -3,4 +3,4 @@ A Univerity Management System which is for the management of the university. It 
 
 User name: admin
 
-Password:  admi
+Password:  admin
