@@ -5,37 +5,40 @@
 #include <cstdlib>
 #include <ctime>
 #include <iomanip>
+
 using namespace std;
-void portal();
-void cafe();
-char numbers[10];   
-void game();
-void dash_board();
- void user_turn();
-bool gameover();
-void enter_marksA();
-void enter_marksB();
-void enter_marksC();
-void enter_marksD();
-void check_marksA();
-void check_marksB();
-void check_marksC();
-void check_marksD();
-void student(int);
+	void portal();
+	void cafe();
+	char numbers[10];   
+	void game();
+	void dash_board();
+	void user_turn();
+	bool gameover();
+	void enter_marksA();
+	void enter_marksB();
+	void enter_marksC();
+	void enter_marksD();
+	void check_marksA();
+	void check_marksB();
+	void check_marksC();
+	void check_marksD();
+	void student(int);
+
 	int e;
-double g();
-double caf();
-char board[3][3] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-int option;
-int row,column;
-char turn = 'X';
-bool tie = false;
+	double g();
+	double caf();
+	char board[3][3] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+	int option;
+	int row,column;
+	char turn = 'X';
+	bool tie = false;
+
 int main()
 {
-	cout<<"	Group Members are	M Shehroz khan		Hassan Ali Janjua		Ali Torab"<<endl<<"			BEMTS-F-21-A"<<endl;
-	cout<<"\t\t\t#################################################"<<endl;
+	// cout<<"\t\t\tM Shehroz khan	Hassan Ali Janjua	Ali Torab"<<endl<<"\t\t\tBEMTS-F-21-A"<<endl;
+	cout<<"\n\t\t\t#################################################"<<endl;
 	cout<<"\t\t\t## Welcome To Air University Management System ##"<<endl;
-	cout<<"\t\t\t#################################################"<<endl;
+	cout<<"\t\t\t#################################################\n\n"<<endl;
 	int decide;
 	char condition;
 do{
@@ -57,13 +60,15 @@ do{
 	default :
 	cout<<"Invalid input\n";
 }
-	cout<<"Press y to start again this Program ? :";
+	cout<<"\n\nPress y to start again this Program ? :";
 	cin>>condition;
 }while(condition=='Y'||condition=='y');
 	return 0;
 }
 
-// function 1 ( portal )
+
+
+// For AU Portal :-
 
 void  portal()
 {
@@ -71,17 +76,17 @@ void  portal()
 	int decide,roll_no;
 	string pass,user;
 	do{
-	cout<<"Welcome To AU Portal"<<endl;
+	cout<<"\t\tWelcome To AU Portal"<<endl;
 
 do{
-	cout<<" Administration \n";	
-	cout<<"Enter your name : ";
+	cout<<"\t	Administration \n";	
+	cout<<"Enter your name : \t";
 	cin>>user;
-	cout<<"Enter your Password : ";
+	cout<<"Enter your Password : \t";
 	cin>>pass;
-	if (user=="khan"&&pass == "1919")	// id , pass
+	if (user=="admin"&&pass == "admin")	// id , pass
 	{
-	cout<<"Welcome "<<user<<" !"<<endl;
+	cout<<"\n\t\tWelcome "<<user<<" !!!"<<endl;
 	cout<<"Do you want to Enter Marks ? Press \"1\"\n";
 	cout<<"Do you want to Check Marks ? Press \"2\"\n";	
 	cin>>decide;
@@ -91,7 +96,7 @@ do{
 	case 1:
 	do
 {	char section;
-	cout<<"Which section marks do you want to enter (A,B,C,D) ? : ";
+	cout<<"\nWhich section marks do you want to enter (A,B,C,D) ? : ";
 	cin>>section;
 	switch(section)
 {
@@ -153,7 +158,7 @@ do{
 	cin>>condition;
 }while(condition=='Y'||condition=='y');
 }
-cout<<"Do you want to Check another section marks ? Press y :";
+cout<<"\nDo you want to Check another section marks ? Press y :";
 cin>>condition;
 }while(condition=='Y'||condition=='y');
 	break;
@@ -167,7 +172,7 @@ cout<<"Do You want to Try Again ? Press y :";
 	else
 	{
 	cout<<"Wrong user name or Password \n";
-	cout<<"haaaan esy tu nai na, esy nai khuly ga \n";			// just for remainder
+	//cout<<"haaaan esy tu nai na, esy nai khuly ga \n";			// just for remainder
 	}
 	cout<<"Do You want to Enter Marks again ? Press y :";
 	cin>>condition;
@@ -179,7 +184,10 @@ cout<<"Do You want to Try Again ? Press y :";
 }
 
 
-void cafe()			// cafe
+
+// For Cafe :-
+
+void cafe()			
 {
 caf();
 }
@@ -209,12 +217,12 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
    
 	for (int i = 0; i < size; i++)
     {
-    cout<<"Enter Student "<<i+1<<" data"<<endl;
+    cout<<"\n\nEnter Student "<<i+1<<" data"<<endl;
     
-	cout<<"Roll number : ";
+	cout<<"\n\tRoll number : ";
     cin>>roll[i];
 	
-	cout<<"Name : ";
+	cout<<"\n\tName : ";
     cin>>name[i];
   
   	cout<<"Lab performance 1 : ";
@@ -267,7 +275,7 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14perf[i];    
 	cout<<endl;  
     
-    cout<<"lab report 1 : ";
+    cout<<"\nlab report 1 : ";
     cin>>lab1 [i];
     
 	cout<<"lab report 2 : ";
@@ -327,15 +335,15 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14 [i];    
 	cout<<endl;
 	
-    cout<<"Mid : ";
+    cout<<"\n\tMid : ";
     cin>>mid [i];    
 	    
-	cout<<"Final : ";
+	cout<<"\n\tFinal : ";
     final[i]=(rand()%50);	
 	cout<<final[i];
 	cout<<endl;
 
-    cout<<"Project : ";
+    cout<<"\n\tProject : ";
     project[i]=(rand()%20);	
 	cout<<project[i];
     cout<<endl;
@@ -374,7 +382,7 @@ void enter_marksB()
 	fstream fout;
 	fout.open("B-section.csv", ios::out);
 	int size;
-	cout<<"Enter number of students in B section : ";
+	cout<<"\nEnter number of students in B section : ";
 		cin>>size;
 
 string name [size];
@@ -391,19 +399,19 @@ float lab11[size],lab12 [size],lab13[size],lab14 [size];
 
 float mid [size], percentage[size],lab[size],labperf[size],project[size],final[size];
 	
-	cout<<"Enter the details of "<<size<<" students : \n";
+	cout<<"\nEnter the details of "<<size<<" students : \n";
    
 	for (int i = 0; i < size; i++)
     {
-    cout<<"Enter Student "<<i+1<<" data"<<endl;
+    cout<<"\nEnter Student "<<i+1<<" data"<<endl;
     
-	cout<<"Roll number : ";
+	cout<<"\n\tRoll number : ";
     cin>>roll[i];
 	
-	cout<<"Name : ";
+	cout<<"\n\tName : ";
     cin>>name[i];
   
-  	cout<<"Lab performance 1 : ";
+  	cout<<"\nLab performance 1 : ";
     cin>>lab1perf[i];
 
     cout<<"Lab performance 2 : ";
@@ -453,7 +461,7 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14perf[i];    
 	cout<<endl;  
     
-    cout<<"lab report 1 : ";
+    cout<<"\nlab report 1 : ";
     cin>>lab1 [i];
     
 	cout<<"lab report 2 : ";
@@ -513,15 +521,15 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14 [i];    
 	cout<<endl;
 	
-    cout<<"Mid : ";
+    cout<<"\n\tMid : ";
     cin>>mid [i];    
 	    
-	cout<<"Final : ";
+	cout<<"\n\tFinal : ";
     final[i]=(rand()%50);	
 	cout<<final[i];
 	cout<<endl;
 
-    cout<<"Project : ";
+    cout<<"\n\tProject : ";
     project[i]=(rand()%20);	
 	cout<<project[i];
     cout<<endl;
@@ -562,7 +570,7 @@ void enter_marksC()
 fstream fout;
 	fout.open("C-section.csv", ios::out);
 	int size;
-	cout<<"Enter number of students in C section : ";
+	cout<<"\nEnter number of students in C section : ";
 	cin>>size;
 
 string name [size];
@@ -579,19 +587,19 @@ float lab11[size],lab12 [size],lab13[size],lab14 [size];
 
 float mid [size], percentage[size],lab[size],labperf[size],project[size],final[size];
 	
-	cout<<"Enter the details of "<<size<<" students : \n";
+	cout<<"\nEnter the details of "<<size<<" students : \n";
    
 	for (int i = 0; i < size; i++)
     {
-    cout<<"Enter Student "<<i+1<<" data"<<endl;
+    cout<<"\nEnter Student "<<i+1<<" data"<<endl;
     
-	cout<<"Roll number : ";
+	cout<<"\n\tRoll number : ";
     cin>>roll[i];
 	
-	cout<<"Name : ";
+	cout<<"\n\tName : ";
     cin>>name[i];
   
-  	cout<<"Lab performance 1 : ";
+  	cout<<"\nLab performance 1 : ";
     cin>>lab1perf[i];
 
     cout<<"Lab performance 2 : ";
@@ -636,7 +644,7 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab13perf[i];    
 	cout<<endl;
 	
-	cout<<"Lab performance 14 : ";
+	cout<<"\nLab performance 14 : ";
     lab14perf[i]=(rand()%15);	
 	cout<<lab14perf[i];    
 	cout<<endl;  
@@ -701,15 +709,15 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14 [i];    
 	cout<<endl;
 	
-    cout<<"Mid : ";
+    cout<<"\n\tMid : ";
     cin>>mid [i];    
 	    
-	cout<<"Final : ";
+	cout<<"\n\tFinal : ";
     final[i]=(rand()%50);	
 	cout<<final[i];
 	cout<<endl;
 
-    cout<<"Project : ";
+    cout<<"\n\tProject : ";
     project[i]=(rand()%20);	
 	cout<<project[i];
     cout<<endl;
@@ -749,7 +757,7 @@ void enter_marksD()
 fstream fout;
 	fout.open("D-section.csv", ios::out);
 	int size;
-	cout<<"Enter number of students in D section : ";
+	cout<<"\nEnter number of students in D section : ";
 	cin>>size;
 
 string name [size];
@@ -766,19 +774,19 @@ float lab11[size],lab12 [size],lab13[size],lab14 [size];
 
 float mid [size], percentage[size],lab[size],labperf[size],project[size],final[size];
 	
-	cout<<"Enter the details of "<<size<<" students : \n";
+	cout<<"\nEnter the details of "<<size<<" students : \n";
    
 	for (int i = 0; i < size; i++)
     {
-    cout<<"Enter Student "<<i+1<<" data"<<endl;
+    cout<<"\nEnter Student "<<i+1<<" data"<<endl;
     
-	cout<<"Roll number : ";
+	cout<<"\n\tRoll number : ";
     cin>>roll[i];
 	
-	cout<<"Name : ";
+	cout<<"\n\tName : ";
     cin>>name[i];
   
-  	cout<<"Lab performance 1 : ";
+  	cout<<"\nLab performance 1 : ";
     cin>>lab1perf[i];
 
     cout<<"Lab performance 2 : ";
@@ -828,7 +836,7 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14perf[i];    
 	cout<<endl;  
     
-    cout<<"lab report 1 : ";
+    cout<<"\nlab report 1 : ";
     cin>>lab1 [i];
     
 	cout<<"lab report 2 : ";
@@ -888,15 +896,15 @@ float mid [size], percentage[size],lab[size],labperf[size],project[size],final[s
 	cout<<lab14 [i];    
 	cout<<endl;
 	
-    cout<<"Mid : ";
+    cout<<"\n\tMid : ";
     cin>>mid [i];    
 	    
-	cout<<"Final : ";
+	cout<<"\n\tFinal : ";
     final[i]=(rand()%50);	
 	cout<<final[i];
 	cout<<endl;
 
-    cout<<"Project : ";
+    cout<<"\n\tProject : ";
     project[i]=(rand()%20);	
 	cout<<project[i];
     cout<<endl;
@@ -1198,120 +1206,120 @@ double caf() {
 	int n;
 	char opt;
 	cout<<"			Welcome to cafe		"<<endl;
-    cout<<"	Press 1 for Pizza "<<"\t\tPRICE = 1000"<<endl;
-	cout<<"	Press 2 for Biryani "<<"\t\tPRICE = 200"<<endl;
-	cout<<"	Press 3 for Burger "<<"\t\tPRICE = 300"<<endl;
-	cout<<"	Press 4 for Sandwitch "<<"\t\tPRICE = 150"<<endl;
-	cout<<"	Press 5 for Finger fries "<<"\tPRICE = 100"<<endl;
-	cout<<"	Press 6 for Samosa "<<"\t\tPRICE = 30"<<endl;
-	cout<<"	Press 7 for Petties "<<"\t\tPRICE = 60"<<endl;
-	cout<<"	Press 8 for Brownies "<<"\t\tPRICE = 120"<<endl;
-	cout<<"	Press 9 for Snacks "<<"\t\tPRICE = 100"<<endl;
-	cout<<"	Press 10 for Italian sandwitch "<<"\tPRICE = 140"<<endl;
-	cout<<"	Press 11 for Cold Drink 1L "<<"\tPRICE = 80"<<endl;
-	cout<<"	Press 12 for Coffee "<<"\t\tPRICE = 70"<<endl;
-	cout<<"	Press 13 for Macroni "<<"\t\tPRICE = 250"<<endl;
-	cout<<"	Press 14 for Shake "<<"\t\tPRICE = 130"<<endl;
-	cout<<"	Press 15 for Chai "<<"\t\tPRICE = 60"<<endl;
-	cout<<"	Press 16 for Biscuits"<<"\t\tPRICE = 30"<<endl;
-	cout<<"	Press 17 for Chocolate "<<"\t\tPRICE = 50"<<endl;
-	cout<<"	Press 18 for Roti "<<"\t\tPRICE = 12"<<endl<<endl;
+    cout<<"	Press 1 : Pizza "<<"\t\tPRICE = 1000"<<endl;
+	cout<<"	Press 2 : Biryani "<<"\t\tPRICE = 200"<<endl;
+	cout<<"	Press 3 : Burger "<<"\t\tPRICE = 300"<<endl;
+	cout<<"	Press 4 : Sandwitch "<<"\t\tPRICE = 150"<<endl;
+	cout<<"	Press 5 : Finger fries "<<"\t\tPRICE = 100"<<endl;
+	cout<<"	Press 6 : Samosa "<<"\t\tPRICE = 30"<<endl;
+	cout<<"	Press 7 : Petties "<<"\t\tPRICE = 60"<<endl;
+	cout<<"	Press 8 : Brownies "<<"\t\tPRICE = 120"<<endl;
+	cout<<"	Press 9 : Snacks "<<"\t\tPRICE = 100"<<endl;
+	cout<<"	Press 10 : Italian sandwitch "<<"\tPRICE = 140"<<endl;
+	cout<<"	Press 11 : Cold Drink 1L "<<"\tPRICE = 80"<<endl;
+	cout<<"	Press 12 : Coffee "<<"\t\tPRICE = 70"<<endl;
+	cout<<"	Press 13 : Macroni "<<"\t\tPRICE = 250"<<endl;
+	cout<<"	Press 14 : Shake "<<"\t\tPRICE = 130"<<endl;
+	cout<<"	Press 15 : Chai "<<"\t\tPRICE = 60"<<endl;
+	cout<<"	Press 16 : Biscuits"<<"\t\tPRICE = 30"<<endl;
+	cout<<"	Press 17 : Chocolate "<<"\t\tPRICE = 50"<<endl;
+	cout<<"	Press 18 : Roti "<<"\t\tPRICE = 12"<<endl<<endl;
 	
 		
 	do{
-	   cout<<"Enter option: ";
+	   cout<<"\tEnter option: ";
 	cin>>n;
 	if(n==1)
 	{
 	total=total+1000;
-	cout<<"Pizza delievered"<<endl;}
+	cout<<"\tPizza delievered"<<endl;}
 	
 	else if(n==2)
 	{
 	total=total+200;
-	cout<<"Biryani delievered"<<endl;}
+	cout<<"\tBiryani delievered"<<endl;}
 	
 		else if(n==3)
 	{
 	total=total+300;
-	cout<<"Burger delievered"<<endl;}
+	cout<<"\tBurger delievered"<<endl;}
 	
 		else if(n==4)
 	{
 	total=total+150;
-	cout<<"Sandwitch delievered"<<endl;}
+	cout<<"\tSandwitch delievered"<<endl;}
 	
 		else if(n==5)
 	{
 	total=total+100;
-	cout<<"Fries delievered"<<endl;}
+	cout<<"\tFries delievered"<<endl;}
 	
 		else if(n==6)
 	{
 	total=total+30;
-	cout<<"Samosa delievered"<<endl;}
+	cout<<"\tSamosa delievered"<<endl;}
 	
 		else if(n==7)
 	{
 	total=total+60;
-	cout<<"Pettes delievered"<<endl;}
+	cout<<"\tPettes delievered"<<endl;}
 	
 		else if(n==8)
 	{
 	total=total+120;
-	cout<<"Brownies  delievered"<<endl;}
+	cout<<"\tBrownies  delievered"<<endl;}
 	
 		else if(n==9)
 	{
 	total=total+100;
-	cout<<"Snacks delievered"<<endl;}
+	cout<<"\tSnacks delievered"<<endl;}
 	
 		else if(n==10)
 	{
 	total=total+140;
-	cout<<"Italian Sandwitch delievered"<<endl;}
+	cout<<"\tItalian Sandwitch delievered"<<endl;}
 	
 		else if(n==11)
 	{
 	total=total+80;
-	cout<<"Drinks delievered"<<endl;}
+	cout<<"\tDrinks delievered"<<endl;}
 	
 		else if(n==12)
 	{
 	total=total+70;
-	cout<<"Coffee delievered"<<endl;}
+	cout<<"\tCoffee delievered"<<endl;}
 	
 		else if(n==13)
 	{
 	total=total+250;
-	cout<<"Macroni delievered"<<endl;}
+	cout<<"\tMacroni delievered"<<endl;}
 	
 		else if(n==14)
 	{
 	total=total+130;
-	cout<<"Shakes delievered"<<endl;}
+	cout<<"\tShakes delievered"<<endl;}
 	
 		else if(n==15)
 	{
 	total=total+60;
-	cout<<"Chai delievered"<<endl;}
+	cout<<"\tChai delievered"<<endl;}
 	
 		else if(n==16)
 	{
 	total=total+30;
-	cout<<"Biscuitsdelievered"<<endl;}
+	cout<<"\tBiscuits delievered"<<endl;}
 	
 		else if(n==17)
 	{
 	total=total+50;
-	cout<<"Chocolate delievered"<<endl;}
+	cout<<"\tChocolate delievered"<<endl;}
 	
 		else if(n==18)
 	{
 	total=total+200;
-	cout<<"Roti delievered"<<endl;}
+	cout<<"\tRoti delievered"<<endl;}
 
-    cout<<"Do you want to select another Item(press 'y'or 'Y')";
+    cout<<"\nDo you want to select another Item(press 'Y')";
 	cin>>opt;    
     
     
@@ -1352,7 +1360,7 @@ double g()
         gameover();
     }
     if(turn == 'X' && tie == false){
-        cout<<"\n\n\t\t\tCongratulations!Player with 'O' has won the game";
+        cout<<"\n\n\t\t\tCongratulations!Player with 'O' has won the game\n\n";
     }
     else if(turn == 'O' && tie == false){
         cout<<"\n\n\t\t\tCongratulations!Player with 'X' has won the game";
@@ -1442,4 +1450,3 @@ bool gameover()
     tie = true;
     return false;
 }
-
